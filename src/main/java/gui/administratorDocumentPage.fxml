@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdministratorDocumentPageController">
+   <children>
+      <Label layoutX="35.0" layoutY="14.0" text="Documents" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="60.0" text="Existing document types:" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="documentsTable" layoutX="35.0" layoutY="85.0" prefHeight="339.0" prefWidth="215.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="214.0000089009603" text="Name">
+             <cellValueFactory>
+                <PropertyValueFactory property="name" />
+             </cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="addDocumentButton" layoutX="273.0" layoutY="126.0" mnemonicParsing="false" onAction="#addDocumentButtonOnAction" prefHeight="29.0" prefWidth="223.0" text="Add Document" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteDocumentButton" layoutX="273.0" layoutY="240.0" mnemonicParsing="false" onAction="#deleteDocumentButtonOnAction" prefHeight="29.0" prefWidth="223.0" text="Delete Selected Document" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="554.0" layoutY="394.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="29.0" prefWidth="106.0" text="Cancel" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="messageLabel" layoutX="273.0" layoutY="166.0" prefHeight="40.0" prefWidth="401.0" textFill="#d74e5c">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="documentNameTextField" layoutX="474.0" layoutY="86.0" prefHeight="25.0" prefWidth="199.0" />
+      <Label layoutX="273.0" layoutY="91.0" text="Add new type of document :" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="messageLabel1" layoutX="270.0" layoutY="285.0" prefHeight="86.0" prefWidth="387.0" textFill="#d74e5c" wrapText="true">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

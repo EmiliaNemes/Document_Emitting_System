@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserProfilePageController">
+   <children>
+      <TextField fx:id="usernameTextField" editable="false" layoutX="133.0" layoutY="65.0" prefHeight="25.0" prefWidth="169.0" />
+      <TextField fx:id="phoneNumberTextField" layoutX="484.0" layoutY="182.0" prefHeight="25.0" prefWidth="169.0" />
+      <TextField fx:id="firstNameTextField" layoutX="133.0" layoutY="145.0" prefHeight="25.0" prefWidth="169.0" />
+      <TextField fx:id="lastNameTextField" layoutX="484.0" layoutY="145.0" prefHeight="25.0" prefWidth="169.0" />
+      <TextField fx:id="emailAddressTextField" layoutX="133.0" layoutY="182.0" prefHeight="25.0" prefWidth="169.0" />
+      <Label layoutX="17.0" layoutY="14.0" text="My Profile" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="70.0" text="Username:" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="110.0" text="Password:" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="349.0" layoutY="110.0" text="Confirm Password:" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="187.0" text="Email Address:" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="349.0" layoutY="187.0" text="Phone Number:" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="150.0" text="First Name:" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="349.0" layoutY="150.0" text="Last Name:" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="284.0" text="Residences:" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="residenceTable" layoutX="25.0" layoutY="304.0" prefHeight="191.0" prefWidth="403.0">
+        <columns>
+          <TableColumn fx:id="cityColumn" prefWidth="155.33334732055664" text="City">
+             <cellValueFactory>
+                <PropertyValueFactory property="city" />
+             </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="streetColumn" minWidth="7.333343505859375" prefWidth="167.3333282470703" text="Street">
+           <cellValueFactory>
+              <PropertyValueFactory property="street" />
+           </cellValueFactory>
+        </TableColumn>
+           <TableColumn fx:id="numberColumn" prefWidth="78.66667683919269" text="Number">
+              <cellValueFactory>
+                 <PropertyValueFactory property="number" />
+              </cellValueFactory>
+           </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="addResidenceButton" layoutX="564.0" layoutY="255.0" mnemonicParsing="false" onAction="#addResidenceButtonOnAction" prefHeight="29.0" prefWidth="118.0" text="Add Residence" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="deleteResidenceButton" layoutX="452.0" layoutY="336.0" mnemonicParsing="false" onAction="#deleteResidenceButtonOnAction" prefHeight="29.0" prefWidth="223.0" text="Delete Selected Residence" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveButton" layoutX="452.0" layoutY="14.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="29.0" prefWidth="89.0" text="Save" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="569.0" layoutY="14.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="29.0" prefWidth="89.0" text="Cancel" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="passwordField" layoutX="133.0" layoutY="105.0" prefHeight="25.0" prefWidth="169.0" />
+      <PasswordField fx:id="confirmPasswordField" layoutX="484.0" layoutY="105.0" prefHeight="25.0" prefWidth="169.0" />
+      <Label fx:id="messageLabel" layoutX="25.0" layoutY="261.0" prefHeight="17.0" prefWidth="519.0" textFill="#d74e5c">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cityTextField" layoutX="132.0" layoutY="217.0" prefHeight="25.0" prefWidth="140.0" />
+      <Label layoutX="23.0" layoutY="222.0" text="Address:" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="222.0" text="City:" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="279.0" layoutY="222.0" text="Street:" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="506.0" layoutY="222.0" text="Nr:" textFill="#12374f">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="streetTextField" layoutX="327.0" layoutY="217.0" prefHeight="25.0" prefWidth="169.0" />
+      <TextField fx:id="numberTextField" layoutX="534.0" layoutY="217.0" prefHeight="25.0" prefWidth="89.0" />
+      <Label fx:id="messageLabel1" layoutX="452.0" layoutY="379.0" prefHeight="114.0" prefWidth="223.0" textFill="#d74e5c" wrapText="true">
+         <font>
+            <Font name="Bookman Old Style Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
